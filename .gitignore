@@ -1,0 +1,4 @@
+.byebug_history
+.rspec
+.DS_Store
+node_modules/
