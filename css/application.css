@@ -1,5 +1,11 @@
 body {
   display: flex;
-  justify-content: center;
-  background-image: url('../images/background.jpg') ;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+}
+
+canvas {
+  border: 2px white solid;
+  border-radius: 5px;
 }
