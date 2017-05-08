@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: "./lib/tetris.js",
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname) + '/lib',
     filename: "bundle.js"
   },
   module: {
