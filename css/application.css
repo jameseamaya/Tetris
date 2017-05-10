@@ -4,6 +4,7 @@ body, div, nav, a {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,6 @@ body {
 }
 
 canvas {
-  position: relative;
   border: 2px white solid;
   border-radius: 5px;
 }
