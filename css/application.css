@@ -1,11 +1,301 @@
+body, div, nav, a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: black;
+  font-family: sans-serif;
 }
 
 canvas {
+  position: relative;
   border: 2px white solid;
   border-radius: 5px;
+}
+
+.canvas-cover {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  position: absolute;
+}
+
+.canvas-loading {
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  z-index: 2;
+  background: black;
+  color: white;
+  font-size: 30px;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+  border-top: 2px white solid;
+  border-radius: 5px;
+}
+.canvas-loading p {
+  padding: 10px 15px;
+}
+
+.canvas-left, .canvas-right, .canvas-middle {
+  width: 350px;
+  height: 600px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-left {
+  /*background: yellow;*/
+}
+
+.canvas-middle {
+  width: 300px;
+  font-size: 25px;
+  font-family: sans-serif;
+  border-right: 1px white solid;
+  border-left: 1px white solid;
+}
+
+.canvas-middle:hover {
+  cursor: pointer;
+}
+
+.canvas-right {
+  /*background: pink*/
+}
+
+.score-pieces {
+/*   border: 1px solid white; */
+  height: 90%;
+  width: 80%;
+  /*background: pink;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.score {
+  /*background: red;*/
+  height: 19%;
+}
+
+.all-pieces {
+  height: 80%;
+  width: 100%;
+}
+
+.piece-1, .piece-2, .piece-3 {
+  height: 33.33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.piece-1 div, .piece-2 div, .piece-3 div {
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+  border: white 2px solid;
+  box-sizing: border-box;
+}
+
+
+
+.piece-1 div {
+   background: black;
+}
+
+.piece-2 div {
+   background: black;
+}
+
+.piece-3 div {
+   background: black;
+}
+
+.score {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+/*   background: black; */
+}
+
+.score > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score > div:first-child > div:first-child {
+  border-bottom: 1px white solid;
+}
+
+.score > div:first-child > div:nth-child(2) {
+  font-family: monaco;
+  color: orange;
+}
+
+.score > div:nth-child(2) {
+  border-bottom: 1px white solid;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-help {
+  /*position: absolute;*/
+/*   background: black; */
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-help nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-help nav a {
+  background: black;
+  margin-top: 10px;
+  border: 2px white solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 8px;
+}
+
+.nav-help nav a p {
+  padding-left: 10px;
+}
+
+.nav-help nav a:last-child {
+  width: 74%;
+}
+
+.nav-help nav a:hover {
+  background:#002e43;
+  cursor: pointer;
+}
+
+.nav-help .controls {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.nav-help .controls div:nth-child(1) {
+/*   background: blue; */
+  align-self: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px white solid;
+  margin-bottom: 8px;
+}
+
+.nav-help .controls div:nth-child(n+2) {
+  font-size: 20px;
+  padding-bottom: 5px;
+/*   padding-left: 5px; */
+/*   padding-right: 5px; */
+  display: flex;
+  align-items: center;
+}
+
+.nav-help .controls div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-help .controls div:nth-child(2) .fa,
+  .nav-help .controls div:nth-child(3) .fa {
+  color:grey;
+  font-size: 25px;
+  padding-left: 15px;
+}
+
+.nav-help .controls div:nth-child(4) p {
+  padding-left: 15px;
+}
+
+.nav-help .controls div:nth-child(5) p {
+  padding-left: 15px;
+  padding-bottom: 4px;
+}
+
+.nav-help .controls div:nth-child(6) .fa {
+  padding-left: 15px;
+
+ padding-bottom: 4px;
+}
+
+.nav-help .controls div:nth-child(7) p {
+  padding-left: 15px;
+    padding-bottom: 4px;
+
+}
+
+.nav-help .controls div:nth-child(8) p {
+  padding-left: 15px;
+}
+
+.nav-help .controls div:nth-child(8) {
+  padding-bottom: 0;
+}
+
+.gameover, .pause {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: black;
+  font-weight: bold;
+/*   border-radius: 5px; */
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  padding: 8px 0;
+}
+
+.hide-div {
+  display: none;
+}
+
+div.hide-back {
+  background: transparent;
+}
+
+.remove-border {
+  border: none;
+}
+
+.canvas-middle {
+     user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
 }

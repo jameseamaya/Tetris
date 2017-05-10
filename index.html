@@ -1,34 +1,118 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tetris</title>
-    <link rel="stylesheet" type="text/css" href="./css/application.css">
-    <script src="./bundle.js"></script>
-    <link href="./images/favicon.ico" rel="icon" type="image/x-icon" />
-    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
-  </head>
-  <body>
-    <canvas id="demoCanvas" width="1000" height="600"></canvas>
-    <audio autoplay loop>
-      <source src="./sounds/tetris.mp3" type="audio/mpeg">
-    </audio>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Tetris</title>
     <link rel="stylesheet" type="text/css" href="./css/application.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <script src="./lib/bundle.js"></script>
-    <link href="./images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="icon" href="./images/favicon.png">
     <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
   </head>
   <body>
     <canvas id="demoCanvas" width="1000" height="600"></canvas>
-    <audio autoplay loop>
+    <div class="canvas-loading">
+      <p>LOADING...</p>
+    </div>
+    <div class="canvas-cover">
+      <div class="canvas-left">
+        <div class="nav-help">
+          <nav>
+            <a href="http://www.jamaya.me/">
+              <i class="fa fa-suitcase" aria-hidden="true"></i>
+              <p>Portfolio</p>
+            </a>
+            <a href="https://www.linkedin.com/in/jameseamaya/">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              <p>LinkedIn</p>
+            </a>
+            <a href="https://github.com/jameseamaya/Tetris">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <p>Github</p>
+            </a>
+          </nav>
+
+          <div class="controls">
+            <div>
+              CONTROLS
+            </div>
+            <div>
+              <strong>MOVE:</strong>
+              <i class="fa fa-caret-left" aria-hidden="true"></i>
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+              <i class="fa fa-caret-right" aria-hidden="true"></i>
+            </div>
+
+            <div>
+              <strong>ROTATE:</strong>
+              <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </div>
+
+            <div>
+              <strong>SLAM:</strong> <p>'spacebar'</p>
+            </div>
+
+            <div>
+                <strong>MUSIC:</strong> <p>'m'</p>
+            </div>
+
+            <div>
+              <strong>PAUSE:</strong>
+              <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            </div>
+
+            <div>
+              <strong>RESTART:</strong> <p>'r'</p>
+            </div>
+
+            <div>
+              <strong>QUIT:</strong> <p>'q'</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas-middle">
+        <div class="start">
+          CLICK TO START GAME
+        </div>
+        <div class="pause hide-div">
+          PAUSED
+        </div>
+        <div class="gameover hide-div">
+          <p>GAME OVER</p>
+          <p>Click to play again!</p>
+        </div>
+      </div>
+      <div class="canvas-right">
+        <div class="score-pieces">
+          <div class="score">
+              <div>
+                <div>SCORE</div>
+                <div class="current-score">0</div>
+              </div>
+              <div>NEXT</div>
+          </div>
+          <div class="all-pieces">
+            <div class="piece-1">
+              <div>
+
+              </div>
+            </div>
+            <div class="piece-2">
+              <div>
+
+              </div>
+            </div>
+            <div class="piece-3">
+              <div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio loop autoplay>
       <source src="./sounds/tetris.mp3" type="audio/mpeg">
     </audio>
   </body>
